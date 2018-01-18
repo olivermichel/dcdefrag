@@ -1,0 +1,134 @@
+
+body {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    /*background: #d0d0d0;*/
+    background: white;
+}
+
+.main {
+    display: block;
+    width: 1202px;
+    height: 767px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    margin-left: -600px;
+    margin-top: -384px;
+    border: 1px solid #999;
+
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.main > .content {
+    display: block;
+    height: 610px;
+    background: #fdfdfd;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.main .content > .left {
+    border-top-left-radius: 4px;
+    display: block;
+    float: left;
+    width: 720px;
+    height: 610px;
+    background: #fdfdfd;
+}
+
+.main .content > .right {
+    border-top-right-radius: 4px;
+    display: block;
+    float: right;
+    width: 480px;
+    height: 610px;
+    padding: 10px;
+    background: #fdfdfd;
+}
+
+.main .content > .right .chart {
+    /*padding: 10px;*/
+    display: block;
+    height: 180px;
+}
+
+.ct-line {
+    stroke-width: 1.5px;
+}
+
+.ct-series-a .ct-line {
+    stroke: #003366;
+}
+
+.ct-series-b .ct-line {
+    stroke: #b22222;
+}
+
+.ct-series-c .ct-line {
+    stroke: #999999;
+}
+
+.ct-series-d .ct-line {
+    stroke: #003366;
+    stroke-dasharray: 5px 5px;
+}
+
+.ct-series-e .ct-line {
+    stroke: #b22222;
+    stroke-dasharray: 5px 5px;
+}
+
+.ct-series-f .ct-line {
+    stroke: #999999;
+    stroke-dasharray: 5px 5px;
+}
+
+.ct-series-g .ct-line {
+    stroke: green;
+}
+
+.ct-series-h .ct-line {
+    stroke: purple;
+}
+
+.main .content > .right > .actions {
+    padding: 10px;
+}
+
+.main .lower {
+    display: block;
+    height: 125px;
+    width: 1200px;
+    background: #fdfdfd;
+    padding: 10px;
+}
+
+.main .lower .stats {
+    height: 105px;
+}
+
+.main .lower .stats .statistics {
+    padding: 18px;
+}
+
+.main .footer {
+    border-top: 1px solid #ccc;
+    display: block;
+    height: 30px;
+    background: #f3f3f3;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 4px 10px;
+    text-align: right;
+}
+
+
+
+
+
+
+
+

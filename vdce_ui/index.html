@@ -1,0 +1,352 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cloudsim</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/vendor/normalize-3.0.3.css">
+    <link rel="stylesheet" href="css/vendor/semantic-2.2.9.min.css">
+    <link rel="stylesheet" href="css/vendor/chartist-0.11.0.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="icon" href="favicon.ico"/>
+</head>
+<body>
+<div class="main">
+    <div class="content">
+        <div class="left">
+            <svg class="topo" width="700" height="610"></svg>
+        </div>
+        <div class="right">
+            <div class="ui four item main-menu pointing menu">
+                <a class="active item" data-tab="main-status">Status</a>
+                <a class="item" data-tab="main-simulation">Simulation</a>
+                <a class="item" data-tab="main-networks">Networks</a>
+                <a class="item" data-tab="main-scaling">Scaling</a>
+            </div>
+            <div class="ui active tab" data-tab="main-status"></div>
+            <div class="ui tab" data-tab="main-simulation"></div>
+            <div class="ui tab" data-tab="main-networks"></div>
+            <div class="ui tab" data-tab="main-scaling"></div>
+        </div>
+    </div>
+
+    <div class="lower">
+        <div class="ui segment stats">
+
+            <div class="ui tiny statistics">
+                <div class="physical statistic">
+                    <div class="value">
+                        -- / --
+                    </div>
+                    <div class="label">
+                        Physical
+                    </div>
+                </div>
+                <div class="virtual statistic">
+                    <div class="value">
+                        --
+                    </div>
+                    <div class="label">
+                        Virtual
+                    </div>
+                </div>
+                <div class="server_utilization statistic">
+                    <div class="value">
+                        --%
+                    </div>
+                    <div class="label">
+                        Servers
+                    </div>
+                </div>
+                <div class="switch_utilization statistic">
+                    <div class="value">
+                        --%
+                    </div>
+                    <div class="label">
+                        Switches
+                    </div>
+                </div>
+                <div class="edge_utilization statistic">
+                    <div class="value">
+                        --%
+                    </div>
+                    <div class="label">
+                        Links
+                    </div>
+                </div>
+                <div class="accept statistic">
+                    <div class="value">
+                        --
+                    </div>
+                    <div class="label">
+                        Accept
+                    </div>
+                </div>
+                <div class="path_len statistic">
+                    <div class="value">
+                        --
+                    </div>
+                    <div class="label">
+                        Path Len
+                    </div>
+                </div>
+                <div class="server_var statistic">
+                    <div class="value">
+                        --
+                    </div>
+                    <div class="label">
+                        Server Var
+                    </div>
+                </div>
+                <div class="switch_var statistic">
+                    <div class="value">
+                        --
+                    </div>
+                    <div class="label">
+                        Switch Var
+                    </div>
+                </div>
+                <div class="edge_var statistic">
+                    <div class="value">
+                        --
+                    </div>
+                    <div class="label">
+                        Link Var
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+
+        -->
+    </div>
+    <div class="footer"></div>
+</div>
+
+<script id="main-status-template" type="text/x-handlebars-template">
+    <div class="ui segment">
+        <div class="ct-chart"></div>
+    </div>
+</script>
+
+<script id="main-simulation-template" type="text/x-handlebars-template">
+    <div class="ui top attached sim-menu menu">
+        <a class="item active" data-tab="vc">VC</a>
+        <a class="item" data-tab="voc">VOC</a>
+        <a class="item" data-tab="3t">3T</a>
+    </div>
+    <div class="ui bottom attached active segment tab" data-tab="vc">
+        <div class="ui vc form">
+            <div class="four fields">
+                <div class="field">
+                    <label>REQ</label>
+                    <input name="r" type="text">
+                </div>
+                <div class="field">
+                    <label>N</label>
+                    <input name="n" type="text">
+                </div>
+                <div class="field">
+                    <label>C</label>
+                    <input name="c" type="text">
+                </div>
+                <div class="field">
+                    <label>B</label>
+                    <input name="b" type="text">
+                </div>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <button class="ui fluid button action rand">RAND</button>
+                </div>
+                <div class="field">
+                    <button class="ui fluid button action new">VC MAP</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="ui bottom attached segment tab" data-tab="voc">
+        <div class="ui voc form">
+            <div class="six fields">
+                <div class="field">
+                    <label>REQ</label>
+                    <input name="r" type="text">
+                </div>
+                <div class="field">
+                    <label>N</label>
+                    <input name="n" type="text">
+                </div>
+                <div class="field">
+                    <label>S</label>
+                    <input name="s" type="text">
+                </div>
+                <div class="field">
+                    <label>C</label>
+                    <input name="c" type="text">
+                </div>
+                <div class="field">
+                    <label>B</label>
+                    <input name="b" type="text">
+                </div>
+                <div class="field">
+                    <label>O</label>
+                    <input name="o" type="text">
+                </div>
+            </div>
+
+            <div class="two fields">
+                <div class="field">
+                    <button class="ui fluid button action rand">RAND</button>
+                </div>
+                <div class="field">
+                    <button class="ui fluid button action new">VOC MAP</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui bottom attached segment tab" data-tab="3t">
+        <div class="ui t3 form">
+            <div class="six fields">
+                <div class="field">
+                    <label>REQ</label>
+                    <input name="r" type="text">
+                </div>
+                <div class="field">
+                    <label>&alpha;</label>
+                    <input name="alpha" type="text">
+                </div>
+                <div class="field">
+                    <label>&beta;</label>
+                    <input name="beta" type="text">
+                </div>
+                <div class="field">
+                    <label>&gamma;</label>
+                    <input name="gamma" type="text">
+                </div>
+                <div class="field">
+                    <label>C</label>
+                    <input name="c" type="text">
+                </div>
+                <div class="field">
+                    <label>B</label>
+                    <input name="b" type="text">
+                </div>
+            </div>
+
+            <div class="two fields">
+                <div class="field">
+                    <button class="ui fluid button action rand">RAND</button>
+                </div>
+                <div class="field">
+                    <button class="ui fluid button action new">3T MAP</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui segment">
+        <div class="ui sim form">
+            <div class="three fields">
+                <div class="field">
+                    <label># Requests</label>
+                    <input name="n" type="text">
+                </div>
+                <div class="field">
+                    <label>Type</label>
+                    <div class="ui compact selection dropdown">
+                        <input type="hidden" name="type">
+                        <i class="dropdown icon"></i>
+                        <div class="default text"></div>
+                        <div class="menu">
+                            <div class="item" data-value="vc">VC</div>
+                            <div class="item" data-value="voc">VOC</div>
+                            <div class="item" data-value="3t">3T</div>
+                            <div class="item" data-value="mix">random</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label>&nbsp;</label>
+                    <button class="ui fluid button action start">Start</button>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="checkbox" name="del">
+                    <label>Remove Networks</label>
+                </div>
+            </div>
+        </div>
+        <!--
+        <div class="ui small progress">
+        <div class="bar"></div>
+        </div>
+        -->
+    </div>
+    <div class="ui segment">
+        <div class="ui del form">
+            <div class="three fields">
+                <div class="field">
+                    <label>VN#</label>
+                    <input name="i" type="text">
+                </div>
+                <div class="field">
+                    <label>&nbsp;</label>
+                    <button class="ui fluid button action rand">RAND</button>
+                </div>
+                <div class="field">
+                    <label>&nbsp;</label>
+                    <button class="ui fluid button action delete">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</script>
+
+<script id="main-networks-template" type="text/x-handlebars-template">
+    <div class="ui segment">
+        <table class="ui very basic compact table">
+            <tbody>
+                {{#each networks}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{n}}</td>
+                    <td>{{m}}</td>
+                    <!--<td>-->
+                        <!--<button data-id="{{id}}" class="ui compact right floated mini icon action delete button">-->
+                            <!--<i class="remove icon"></i>-->
+                        <!--</button>-->
+                    <!--</td>-->
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</script>
+
+<script id="main-scaling-template" type="text/x-handlebars-template">
+    <div class="ui segment">
+        <div class="ui remap form">
+            <div class="one field">
+                <div class="field">
+                    <label>&nbsp;</label>
+                    <button class="ui fluid button action remap">Defragment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script src="js/vendor/d3-4.7.3.min.js"></script>
+<script src="js/vendor/jquery-1.12.0.min.js"></script>
+<script src="js/vendor/semantic-2.2.9.min.js"></script>
+<script src="js/vendor/chartist-0.11.0.min.js"></script>
+<script src="js/vendor/handlebars-714a4c4.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

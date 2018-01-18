@@ -1,0 +1,44 @@
+{
+  "nodes": [
+    { "id": 0, "type": 1, "capacity": [100.0, 600.0] },
+    { "id": 1, "type": 1, "capacity": [100.0, 600.0] },
+    { "id": 2, "type": 1, "capacity": [100.0, 600.0] },
+    { "id": 3, "type": 1, "capacity": [100.0, 600.0] },
+
+    { "id": 4, "type": 2, "capacity": [100.0, 100.0] },
+    { "id": 5, "type": 2, "capacity": [100.0, 100.0] },
+    { "id": 6, "type": 2, "capacity": [100.0, 100.0] },
+    { "id": 7, "type": 2, "capacity": [100.0, 100.0] },
+
+    { "id": 8, "type": 2, "capacity": [100.0, 100.0] },
+    { "id": 9, "type": 2, "capacity": [100.0, 100.0] },
+    { "id": 10, "type": 2, "capacity": [100.0, 100.0] },
+    { "id": 11, "type": 2, "capacity": [100.0, 100.0] },
+
+    { "id": 12, "type": 2, "capacity": [100.0, 100.0] },
+    { "id": 13, "type": 2, "capacity": [100.0, 100.0] },
+    { "id": 14, "type": 2, "capacity": [100.0, 100.0] },
+    { "id": 15, "type": 2, "capacity": [100.0, 100.0] }
+
+  ],
+  "edges": [
+    { "id": 0, "from": 0, "to": 1, "capacity": 200.0 },
+    { "id": 1, "from": 0, "to": 2, "capacity": 200.0 },
+    { "id": 2, "from": 0, "to": 3, "capacity": 200.0 },
+
+    { "id": 3, "from": 1, "to": 4, "capacity": 100.0 },
+    { "id": 4, "from": 1, "to": 5, "capacity": 100.0 },
+    { "id": 5, "from": 1, "to": 6, "capacity": 100.0 },
+    { "id": 6, "from": 1, "to": 7, "capacity": 100.0 },
+
+    { "id": 7, "from": 2, "to": 8, "capacity": 100.0 },
+    { "id": 8, "from": 2, "to": 9, "capacity": 100.0 },
+    { "id": 9, "from": 2, "to": 10, "capacity": 100.0 },
+    { "id": 10, "from": 2, "to": 11, "capacity": 100.0 },
+
+    { "id": 11, "from": 3, "to": 12, "capacity": 100.0 },
+    { "id": 12, "from": 3, "to": 13, "capacity": 100.0 },
+    { "id": 13, "from": 3, "to": 14, "capacity": 100.0 },
+    { "id": 14, "from": 3, "to": 15, "capacity": 100.0 }
+  ]
+}

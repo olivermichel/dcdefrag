@@ -1,0 +1,19 @@
+{
+  "nodes": [
+    { "id": 0, "type": 0, "capacity": [100.0, 600.0], "group": 0 },
+    { "id": 1, "type": 0, "capacity": [100.0, 300.0], "group": 0 },
+    { "id": 2, "type": 0, "capacity": [100.0, 300.0], "group": 0 },
+    { "id": 3, "type": 1, "capacity": [100.0, 100.0], "group": 1 },
+    { "id": 4, "type": 1, "capacity": [100.0, 100.0], "group": 1 },
+    { "id": 5, "type": 1, "capacity": [100.0, 100.0], "group": 2 },
+    { "id": 6, "type": 1, "capacity": [100.0, 100.0], "group": 2 }
+  ],
+  "edges": [
+    { "id": 0, "from": 0, "to": 1, "capacity": 200.0, "group": 0 },
+    { "id": 1, "from": 0, "to": 2, "capacity": 200.0, "group": 0 },
+    { "id": 2, "from": 1, "to": 3, "capacity": 100.0, "group": 1 },
+    { "id": 3, "from": 1, "to": 4, "capacity": 100.0, "group": 1 },
+    { "id": 4, "from": 2, "to": 5, "capacity": 100.0, "group": 2 },
+    { "id": 5, "from": 2, "to": 6, "capacity": 100.0, "group": 2 }
+  ]
+}

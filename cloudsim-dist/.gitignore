@@ -1,0 +1,7 @@
+.idea
+ext/include/catch/catch.h
+ext/include/plexum/graph.h
+ext/include/json/json.h
+test_runner
+build/
+test/test_configuration.json

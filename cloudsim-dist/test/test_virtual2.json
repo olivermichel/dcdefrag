@@ -1,0 +1,15 @@
+{
+  "id": 2,
+  "type": 0,
+  "nodes": [
+    { "id": 0, "type": 0, "demand": [50.0, 50.0], "group": 0 },
+    { "id": 1, "type": 1, "demand": [40.0, 40.0], "group": 1 },
+    { "id": 2, "type": 1, "demand": [40.0, 40.0], "group": 1 },
+    { "id": 3, "type": 1, "demand": [40.0, 40.0], "group": 1 }
+  ],
+  "edges": [
+    { "id": 0, "from": 0, "to": 1, "demand": 35.0 },
+    { "id": 1, "from": 0, "to": 2, "demand": 35.0 },
+    { "id": 2, "from": 0, "to": 3, "demand": 35.0 }
+  ]
+}
